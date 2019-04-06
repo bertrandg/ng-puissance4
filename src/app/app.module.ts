@@ -8,12 +8,12 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule  } from '@ngrx/router-store';
 
-import { AppComponent } from 'app/components/app.component';
-import { components } from 'app/components';
-import { routes } from 'app/routes';
-import { DataFacade } from 'app/data/facade';
-import { reducers, metaReducers } from 'app/data/reducers/reducers';
-import { Puissance4Effects } from 'app/data/effects';
+import { AppComponent } from './components/app.component';
+import { components } from './components';
+import { routes } from './routes';
+import { DataFacade } from './data/facade';
+import { reducers, metaReducers } from './data/reducers/reducers';
+import { Puissance4Effects } from './data/effects';
 
 
 @NgModule({

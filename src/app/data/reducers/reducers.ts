@@ -1,9 +1,9 @@
 import { ActionReducerMap, ActionReducer } from '@ngrx/store';
 import { routerReducer } from '@ngrx/router-store';
 
-import { playersReducer, initialState as playersState } from 'app/data/reducers/players.reducer';
-import { gameReducer, initialState as gameState } from 'app/data/reducers/game.reducer';
-import { environment } from 'environments/environment';
+import { playersReducer, initialState as playersState } from './players.reducer';
+import { gameReducer, initialState as gameState } from './game.reducer';
+import { environment } from '../../../environments/environment';
 
 
 export const initialState: IAppStore = {

@@ -1,6 +1,6 @@
 import { Component, Input, ChangeDetectionStrategy, Output, EventEmitter, HostBinding } from '@angular/core';
 
-import { isBoardColumnFull } from 'app/data/utils';
+import { isBoardColumnFull } from '../../../data/utils';
 
 
 @Component({

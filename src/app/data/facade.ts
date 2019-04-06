@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Actions } from '@ngrx/effects';
 import { map } from 'rxjs/operators';
 
-import { INIT_PLAYERS, ADD_TOKEN_TO_COLUMN, RESET_ALL, INIT_GAME, ERROR_GAME } from 'app/data/actions';
+import { INIT_PLAYERS, ADD_TOKEN_TO_COLUMN, RESET_ALL, INIT_GAME, ERROR_GAME } from './actions';
 
 
 @Injectable()

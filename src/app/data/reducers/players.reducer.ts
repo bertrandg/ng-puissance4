@@ -1,6 +1,6 @@
 import { cloneDeep } from 'lodash';
 
-import { ActionTypes, ActionsUnion } from 'app/data/actions';
+import { ActionTypes, ActionsUnion } from '../actions';
 
 
 export const initialState: ICurrentPlayers = {

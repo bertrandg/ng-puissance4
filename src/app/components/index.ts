@@ -1,23 +1,23 @@
 
-import { AppComponent } from 'app/components/app.component';
+import { AppComponent } from './app.component';
 
-import { HomeRouteComponent } from 'app/components/home/home.route.component';
-import { MenuSmartComponent } from 'app/components/home/menu/menu.smart.component';
-import { MenuComponent } from 'app/components/home/menu/menu.component';
+import { HomeRouteComponent } from './home/home.route.component';
+import { MenuSmartComponent } from './home/menu/menu.smart.component';
+import { MenuComponent } from './home/menu/menu.component';
 
-import { ConfigRouteComponent } from 'app/components/config/config.route.component';
-import { PlayersFormSmartComponent } from 'app/components/config/players/playersForm.smart.component';
-import { PlayersFormComponent } from 'app/components/config/players/playersForm.component';
+import { ConfigRouteComponent } from './config/config.route.component';
+import { PlayersFormSmartComponent } from './config/players/playersForm.smart.component';
+import { PlayersFormComponent } from './config/players/playersForm.component';
 
-import { GameRouteComponent } from 'app/components/game/game.route.component';
-import { BoardSmartComponent } from 'app/components/game/board/board.smart.component';
-import { BoardComponent } from 'app/components/game/board/board.component';
-import { BoardColumnComponent } from 'app/components/game/board/boardColumn.component';
-import { BoardCellComponent } from 'app/components/game/board/boardCell.component';
-import { StatusSmartComponent } from 'app/components/game/status/status.smart.component';
-import { StatusComponent } from 'app/components/game/status/status.component';
-import { ScoreSmartComponent } from 'app/components/game/score/score.smart.component';
-import { ScoreComponent } from 'app/components/game/score/score.component';
+import { GameRouteComponent } from './game/game.route.component';
+import { BoardSmartComponent } from './game/board/board.smart.component';
+import { BoardComponent } from './game/board/board.component';
+import { BoardColumnComponent } from './game/board/boardColumn.component';
+import { BoardCellComponent } from './game/board/boardCell.component';
+import { StatusSmartComponent } from './game/status/status.smart.component';
+import { StatusComponent } from './game/status/status.component';
+import { ScoreSmartComponent } from './game/score/score.smart.component';
+import { ScoreComponent } from './game/score/score.component';
 
 
 export const components = [

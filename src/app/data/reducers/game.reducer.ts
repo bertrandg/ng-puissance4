@@ -1,7 +1,7 @@
 import { cloneDeep } from 'lodash';
 
-import { getEmptyBoard, getUpdatedBoard } from 'app/data/utils';
-import { ActionTypes, ActionsUnion } from 'app/data/actions';
+import { getEmptyBoard, getUpdatedBoard } from '../utils';
+import { ActionTypes, ActionsUnion } from '../actions';
 
 
 export const initialState: ICurrentGame = {

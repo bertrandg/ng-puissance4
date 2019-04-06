@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { DataFacade } from 'app/data/facade';
+import { DataFacade } from '../../../data/facade';
 
 
 @Component({

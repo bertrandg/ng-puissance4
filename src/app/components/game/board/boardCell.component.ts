@@ -1,7 +1,7 @@
 import { Component, Input, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 import { trigger, style, animate, transition, state, keyframes } from '@angular/animations';
 
-import { NB_ROWS } from 'app/data/utils';
+import { NB_ROWS } from '../../../data/utils';
 
 
 @Component({

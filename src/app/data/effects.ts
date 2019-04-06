@@ -3,8 +3,8 @@ import { Store, Action } from '@ngrx/store';
 import { Effect, Actions, ofType, ROOT_EFFECTS_INIT } from '@ngrx/effects';
 import { withLatestFrom, filter, tap, map, throttleTime } from 'rxjs/operators';
 
-import { ActionTypes, INIT_ALL, INIT_PLAYERS, INIT_GAME, ADD_TOKEN_TO_COLUMN, UPDATE_GAME, END_GAME, ERROR_GAME, RESET_ALL } from 'app/data/actions';
-import { getLocalStorage, setLocalStorage, removeLocalStorage, getUpdatedBoard, isBoardFull, getChainsFromBoard } from 'app/data/utils';
+import { ActionTypes, INIT_ALL, INIT_PLAYERS, INIT_GAME, ADD_TOKEN_TO_COLUMN, UPDATE_GAME, END_GAME, ERROR_GAME, RESET_ALL } from './actions';
+import { getLocalStorage, setLocalStorage, removeLocalStorage, getUpdatedBoard, isBoardFull, getChainsFromBoard } from './utils';
 
 @Injectable()
 export class Puissance4Effects {

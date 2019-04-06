@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
-import { DataFacade } from 'app/data/facade';
+import { DataFacade } from '../../../data/facade';
 
 
 @Component({
