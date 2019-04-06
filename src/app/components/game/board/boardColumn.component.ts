@@ -8,8 +8,8 @@ import { Component, Input, HostBinding, ChangeDetectionStrategy } from '@angular
         :host {
             display: flex;
             flex-direction: column;
-            transition: outline .4s;
-            outline: 3px solid transparent;
+            transition: border .4s;
+            border: 4px solid grey;
             cursor: pointer;
         }
 
@@ -22,11 +22,11 @@ import { Component, Input, HostBinding, ChangeDetectionStrategy } from '@angular
         }
 
         :host.player1:not(.is-full):hover {
-            outline-color: #ffff00c4;
+            border-color: #ffff00c4;
         }
 
         :host.player2:not(.is-full):hover {
-            outline-color: #ff0000c4;
+            border-color: #ff0000c4;
         }
     `],
     template: `

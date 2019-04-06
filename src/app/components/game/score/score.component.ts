@@ -25,6 +25,7 @@ import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from 
             transition: background .4s;
             margin-bottom: 10px;
             border-radius: 10px;
+            overflow: hidden;
         }
 
         .token {

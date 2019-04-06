@@ -20,8 +20,7 @@ import { NB_ROWS } from '../../../data/utils';
             height: 100%;
         }
         
-        :host .cell__token svg {
-        }
+        :host .cell__token svg {}
         
         :host .cell__mask {
             width: 100%;
@@ -29,6 +28,7 @@ import { NB_ROWS } from '../../../data/utils';
             position: relative;
             top: -100%;
             z-index: 5;
+            transform: scale(1.05);
         }
     `],
     animations: [
