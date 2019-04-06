@@ -7,30 +7,7 @@ import { NB_ROWS } from '../../../data/utils';
 @Component({
     selector: 'board-cell',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    styles: [`
-        :host {
-            display: block;
-            width: 55px;
-            height: 55px;
-            background: #d3d3d36e;
-        }
-        
-        :host .cell__token {
-            width: 100%;
-            height: 100%;
-        }
-        
-        :host .cell__token svg {}
-        
-        :host .cell__mask {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            top: -100%;
-            z-index: 5;
-            transform: scale(1.05);
-        }
-    `],
+    styleUrls: [`./boardCell.component.scss`],
     animations: [
         trigger('tokenEnterAnimation', [
             transition(':enter', [

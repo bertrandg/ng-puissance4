@@ -1,0 +1,21 @@
+
+:host {
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: #d3d3d36e;
+}
+
+.cell__token {
+    width: 100%;
+    height: 100%;
+}
+
+.cell__mask {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -100%;
+    z-index: 5;
+    transform: scale(1.05);
+}

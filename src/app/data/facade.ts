@@ -12,7 +12,7 @@ export class DataFacade {
     constructor(private updates$: Actions,
                 private store$: Store<IAppStore>) {}
     
-    // RETRIEVE
+    //// RETRIEVE
 
     getPlayers() {
         return this.store$.select(s => s.players);
@@ -46,7 +46,7 @@ export class DataFacade {
         return this.store$.select(s => s.game.winChainsCells);
     }
 
-    // ACTIONS
+    //// ACTIONS
 
     initPlayers(names: {player1: string, player2: string}) {
         this.store$.dispatch(new INIT_PLAYERS(names));

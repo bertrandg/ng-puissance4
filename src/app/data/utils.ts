@@ -176,10 +176,8 @@ function getChainsFromLine(line: Array<ICellDetails>): Array<IChain> {
     const pattern1 = '1'.repeat(NB_CELL_FOR_CHAIN);
     const pattern2 = '2'.repeat(NB_CELL_FOR_CHAIN);
 
-    // Allow only one chain per line > Correct for 6*7 grid & 4 cells per chain
-    // To make it dynamic and allow NB_ROWS & NB_COLUMNS & NB_CELL_FOR_CHAIN changes
-    // > Need to do it better!
-
+    // Allow only one chain per line..
+    
     if(stringifiedLine.includes(pattern1)) {
         const position = stringifiedLine.indexOf(pattern1);
 

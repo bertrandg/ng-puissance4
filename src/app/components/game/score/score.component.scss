@@ -1,0 +1,44 @@
+
+.centeredblock__element {
+    width: 200px;
+}
+
+.score__games {
+    margin: 0 0 10px 0;
+}
+
+.score__player {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    text-align: left;
+    background: #ffffff33;
+    transition: background .4s;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    .player__token {
+        transform: scale(3);
+        transform-origin: 50% 52%;
+        opacity: .6;
+        margin-right: 25px;
+    }
+
+    &.score__player--turn {
+        background: #ffffffab;
+        
+        .player__token {
+            transform: scale(4);
+            opacity: 1;
+            font-weight: bold;
+
+            &.player__token---p1 {
+                color: #ffff00;
+            }
+            &.player__token---p2 {
+                color: #ff0000;
+            }
+        }
+    }
+}

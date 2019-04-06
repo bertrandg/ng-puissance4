@@ -6,6 +6,7 @@ import { withLatestFrom, filter, tap, map, throttleTime } from 'rxjs/operators';
 import { ActionTypes, INIT_ALL, INIT_PLAYERS, INIT_GAME, ADD_TOKEN_TO_COLUMN, UPDATE_GAME, END_GAME, ERROR_GAME, RESET_ALL } from './actions';
 import { getLocalStorage, setLocalStorage, removeLocalStorage, getUpdatedBoard, isBoardFull, getChainsFromBoard } from './utils';
 
+
 @Injectable()
 export class Puissance4Effects {
 

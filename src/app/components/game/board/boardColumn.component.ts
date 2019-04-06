@@ -4,31 +4,7 @@ import { Component, Input, HostBinding, ChangeDetectionStrategy } from '@angular
 @Component({
     selector: 'board-column',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    styles: [`
-        :host {
-            display: flex;
-            flex-direction: column;
-            transition: border .4s;
-            border: 4px solid grey;
-            cursor: pointer;
-        }
-
-        :host.is-full {
-            cursor: not-allowed;
-        }
-
-        :host:not(.is-full):hover {
-            z-index: 10;
-        }
-
-        :host.player1:not(.is-full):hover {
-            border-color: #ffff00c4;
-        }
-
-        :host.player2:not(.is-full):hover {
-            border-color: #ff0000c4;
-        }
-    `],
+    styleUrls: [`./boardColumn.component.scss`],
     template: `
         <board-cell *ngFor="let rowValue of columnValues; trackBy: trackByFn; let i = index"
                     [columnNum]="columnNum" 
@@ -44,7 +20,7 @@ export class BoardColumnComponent {
     @Input() winChainsCells: Array<string>
 
     @HostBinding('class') get classes(): string {
-        return `player${ this.playerTurn } ${ this.isFull ? 'is-full' : '' }`;
+        return `column--player${ this.playerTurn } ${ this.isFull ? 'column--full' : '' }`;
     }
 
     /*ngAfterViewChecked() {
