@@ -3,6 +3,7 @@ import { routerReducer } from '@ngrx/router-store';
 
 import { playersReducer, initialState as playersState } from 'app/data/reducers/players.reducer';
 import { gameReducer, initialState as gameState } from 'app/data/reducers/game.reducer';
+import { environment } from 'environments/environment';
 
 
 export const initialState: IAppStore = {
@@ -12,12 +13,12 @@ export const initialState: IAppStore = {
 }
 
 export const reducers: ActionReducerMap<IAppStore> = {
-  router:   routerReducer,
-  players:  playersReducer,
-  game:     gameReducer,
+    router:   routerReducer,
+    players:  playersReducer,
+    game:     gameReducer,
 };
 
-export const metaReducers = [logger];
+export const metaReducers = !environment.production ? [logger] : [];
 
 // Log all actions in devTools console
 function logger(reducer: ActionReducer<IAppStore>): ActionReducer<any, any> {

@@ -6,8 +6,8 @@ import { GameRouteComponent } from 'app/components/game/game.route.component';
 
 
 export const routes: Array<Route> = [
-  {path:'home',   component: HomeRouteComponent},
-  {path:'config', component: ConfigRouteComponent},
-  {path:'game',   component: GameRouteComponent},
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path:'home',   component: HomeRouteComponent},
+    {path:'config', component: ConfigRouteComponent},
+    {path:'game',   component: GameRouteComponent},
+    {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];

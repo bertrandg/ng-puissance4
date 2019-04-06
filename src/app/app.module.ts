@@ -17,23 +17,23 @@ import { Puissance4Effects } from 'app/data/effects';
 
 
 @NgModule({
-  imports: [
-    BrowserModule, 
-    RouterModule.forRoot(routes, {enableTracing: false}), 
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    StoreModule.forRoot(reducers, {metaReducers}),
-    EffectsModule.forRoot([Puissance4Effects]),
-    StoreRouterConnectingModule.forRoot(),
-  ],
-  declarations: [...components],
-  providers: [
-    {   
-      provide: LocationStrategy, 
-      useClass: HashLocationStrategy,
-    },
-    DataFacade,
-  ],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule, 
+        RouterModule.forRoot(routes, {enableTracing: false}), 
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        StoreModule.forRoot(reducers, {metaReducers}),
+        EffectsModule.forRoot([Puissance4Effects]),
+        StoreRouterConnectingModule.forRoot(),
+    ],
+    declarations: [...components],
+    providers: [
+        {   
+            provide: LocationStrategy, 
+            useClass: HashLocationStrategy,
+        },
+        DataFacade,
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
