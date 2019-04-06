@@ -1,1 +1,88 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+    background: linear-gradient(to bottom, #ff7600, yellow);
+    user-select: none;
+}
+
+input[type=text] {
+    padding: 5px;
+    border: 0;
+    border-radius: 10px;
+    background: #ffffff98;
+    
+    &:focus {
+        background: #ffffff;
+        outline: 0;
+    }
+}
+
+button {
+    padding: 5px 15px;
+    margin: 0 5px;
+    background-color: #8f7a66;
+    border-radius: 3px;
+    border: 0;
+    text-decoration: none;
+    color: #f9f6f2;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .2s;
+    
+    &[disabled] {
+        opacity: .6;
+        cursor: not-allowed;
+    }
+
+    &:not([disabled]):hover {
+        background-color: #b9926d;
+    }
+}
+
+.centeredblock {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .centeredblock__element {
+        color: #ffffff;
+        text-shadow: 0 0 10px #000000;
+        box-shadow: 0 0 5px 0px #00000030;
+        background: #c5c5c5cf;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+
+        .centeredblock__element__buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+
+.board-effect {
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    
+    &:before, 
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        top: 50%;
+        bottom: 0;
+        left: 55px;
+        right: 55px;
+        border-radius: 100px / 10px;
+    }
+    
+    &:after {
+        right: 10px;
+        left: auto;
+        transform: skew(8deg) rotate(3deg);
+    }
+}
