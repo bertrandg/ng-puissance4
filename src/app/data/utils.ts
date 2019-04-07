@@ -197,3 +197,13 @@ function getChainsFromLine(line: Array<ICellDetails>): Array<IChain> {
 
     return [];
 }
+
+
+//////////////////////////////////////
+// OTHERS
+
+export function hasTouch(): boolean {
+    return 'ontouchstart' in document.documentElement
+        || navigator.maxTouchPoints > 0
+        || navigator.msMaxTouchPoints > 0;
+}

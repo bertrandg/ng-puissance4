@@ -1,4 +1,6 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ElementRef, Renderer2 } from '@angular/core';
+
+import { hasTouch } from '../data/utils';
 
 
 @Component({
@@ -7,4 +9,12 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     template: `
         <router-outlet></router-outlet>`,
 })
-export class AppComponent {}
+export class AppComponent {
+
+    constructor(public elRef: ElementRef,
+                private renderer: Renderer2) {
+        if(hasTouch()) {
+            this.renderer.addClass(this.elRef.nativeElement, 'is-touch-device');
+        }
+    }
+}

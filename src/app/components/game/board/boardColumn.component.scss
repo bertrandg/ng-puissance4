@@ -5,16 +5,27 @@
     transition: border .4s;
     border: 4px solid grey;
     cursor: pointer;
+    
+    &.column--full {
+        cursor: not-allowed;
+    }
+    
+    &.column--player1:not(.column--full):hover {
+        border-color: #ffff00c4;
+    }
+    
+    &.column--player2:not(.column--full):hover {
+        border-color: #ff0000c4;
+    }
 }
 
-:host.column--full {
-    cursor: not-allowed;
-}
+// Avoid locked hover effect on touch devices
+:host {
+    :host-context(.is-touch-device) {
+        &.column--player1:not(.column--full):hover,
+        &.column--player2:not(.column--full):hover {
+            border-color: grey;
+        }
+    }
 
-:host.column--player1:not(.column--full):hover {
-    border-color: #ffff00c4;
-}
-
-:host.column--player2:not(.column--full):hover {
-    border-color: #ff0000c4;
 }

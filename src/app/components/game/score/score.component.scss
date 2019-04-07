@@ -23,6 +23,13 @@
         transform-origin: 50% 52%;
         opacity: .6;
         margin-right: 25px;
+
+        &.player__token---p1 {
+            color: #ffff00;
+        }
+        &.player__token---p2 {
+            color: #ff0000;
+        }
     }
 
     &.score__player--turn {
@@ -32,13 +39,6 @@
             transform: scale(4);
             opacity: 1;
             font-weight: bold;
-
-            &.player__token---p1 {
-                color: #ffff00;
-            }
-            &.player__token---p2 {
-                color: #ff0000;
-            }
         }
     }
 }
@@ -66,8 +66,16 @@
         }
 
         .score__player {
-            width: 100px;
+            flex: 0 0 50px !important;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 0 5px;
+
+            p {
+                display: none;
+            }
         }
     }
 }
