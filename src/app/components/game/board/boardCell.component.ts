@@ -21,9 +21,7 @@ import { NB_ROWS } from '../../../data/utils';
             ]),
         ]),
         trigger('tokenAnimation', [
-            //state('isPlaying', style({transform: `rotate({{ randomAngle }}deg)`}), {params: {randomAngle: 0, startAt: 0, duration: 0}}),
             transition('* => isWinner', [
-                //style({transform: 'rotate({{ randomAngle }}deg)'}),
                 animate('4s .5s', keyframes([
                     style({transform: 'rotate(90deg)', offset: 0}),
                     style({transform: 'rotate(180deg)', offset: .125}),
@@ -42,7 +40,7 @@ import { NB_ROWS } from '../../../data/utils';
         <div class="cell__token">
             <svg *ngIf="rowValue !== 0" 
                  [@tokenEnterAnimation]="{value: true, params: animationParams}" 
-                 [@tokenAnimation]="{value: isChainPart ? 'isWinner' : 'isPlaying', params: animationParams}" 
+                 [@tokenAnimation]="isChainPart ? 'isWinner' : ''" 
                  [attr.fill]="rowValue === 1 ? 'yellow' : 'red'" 
                  version="1.1" 
                  viewBox="0 0 227.438 227.438" 
@@ -87,7 +85,6 @@ export class BoardCellComponent {
 
     get animationParams() {
         return {
-            randomAngle: this.randomAngle,
             startAt: -100 * this.emptyCellsOnTop + '%', 
             duration: .1 * this.emptyCellsOnTop + 's',
         };
