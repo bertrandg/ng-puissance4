@@ -10,6 +10,7 @@ import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from 
     styleUrls: [`./score.component.scss`],
     template: `
         <div class="centeredblock__element">
+            <h2 class="score__title">PUISSANCE 4</h2>
             <p class="score__games">{{ players.nbGames }} games played!</p>
             <div class="score__player" [class.score__player--turn]="playerTurn === 1">
                 <div class="player__token player__token---p1">⍟</div>

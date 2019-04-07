@@ -42,3 +42,32 @@
         }
     }
 }
+
+@media screen and (orientation: portrait), screen and (max-width: 940px) {
+    :host {
+        height: 70px;
+
+        .centeredblock__element {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 0;
+            padding: 0;
+
+            & > * {
+                flex: 1 1 auto;
+            }
+        }
+
+        .score__title {
+            display: none;
+        }
+
+        .score__player {
+            width: 100px;
+            margin: 0 5px;
+        }
+    }
+}

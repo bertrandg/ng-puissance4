@@ -1,0 +1,22 @@
+
+
+:host {
+    z-index: 100;
+    display: none;
+    pointer-events: none;
+    
+    &.visible {
+        display: flex;
+    }
+    
+    &.visible .centeredblock__element {
+        pointer-events: all;
+    }
+    
+    &.player1 .centeredblock__element {
+        border: 4px #ffff00cf solid;
+    }
+    &.player2 .centeredblock__element {
+        border: 4px #ff0000cf solid;
+    }
+}

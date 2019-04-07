@@ -8,28 +8,7 @@ import { trigger, style, animate, transition, state } from '@angular/animations'
     host: {
         class: 'centeredblock',
     },
-    styles: [`
-        :host {
-            z-index: 100;
-            display: none;
-            pointer-events: none;
-        }
-
-        :host(.visible) {
-            display: flex;
-        }
-
-        :host(.visible) .centeredblock__element {
-            pointer-events: all;
-        }
-
-        :host(.player1) .centeredblock__element {
-            border: 4px #ffff00cf solid;
-        }
-        :host(.player2) .centeredblock__element {
-            border: 4px #ff0000cf solid;
-        }
-    `],
+    styleUrls: [`./status.component.scss`],
     animations: [
         trigger('gameEndedAnimation', [
             state('isPlaying', style({
