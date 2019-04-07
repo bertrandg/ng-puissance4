@@ -13,21 +13,27 @@ import { NB_ROWS } from '../../../data/utils';
             transition(':enter', [
                 style({
                     position: 'relative', 
-                    top: '{{ startAt }}'
+                    transform: 'translateY({{ startAt }})'
                 }),
-                animate('{{ duration }} ease', style({top: 0})),
+                animate('{{ duration }} ease', style({
+                    transform: 'translateY(0)'
+                })),
             ]),
         ]),
         trigger('tokenAnimation', [
-            state('isPlaying', style({transform: `rotate({{ randomAngle }}deg)`}), {params: {randomAngle: 0, startAt: 0, duration: 0}}),
+            //state('isPlaying', style({transform: `rotate({{ randomAngle }}deg)`}), {params: {randomAngle: 0, startAt: 0, duration: 0}}),
             transition('* => isWinner', [
-                style({transform: 'rotate({{ randomAngle }}deg)'}),
-                animate('2s .5s', keyframes([
+                //style({transform: 'rotate({{ randomAngle }}deg)'}),
+                animate('4s .5s', keyframes([
                     style({transform: 'rotate(90deg)', offset: 0}),
-                    style({transform: 'rotate(180deg)', offset: .25}),
-                    style({transform: 'rotate(270deg)', offset: .50}),
-                    style({transform: 'rotate(360deg)', offset: .75}),
-                    style({transform: 'rotate(450deg)', offset: 1}),
+                    style({transform: 'rotate(180deg)', offset: .125}),
+                    style({transform: 'rotate(270deg)', offset: .250}),
+                    style({transform: 'rotate(360deg)', offset: .375}),
+                    style({transform: 'rotate(450deg)', offset: .500}),
+                    style({transform: 'rotate(540deg)', offset: .625}),
+                    style({transform: 'rotate(630deg)', offset: .750}),
+                    style({transform: 'rotate(720deg)', offset: .875}),
+                    style({transform: 'rotate(810deg)', offset: 1}),
                 ])),
             ]),
         ]),
@@ -35,13 +41,14 @@ import { NB_ROWS } from '../../../data/utils';
     template: `
         <div class="cell__token">
             <svg *ngIf="rowValue !== 0" 
-                 [@tokenAnimation]="{value: isChainPart ? 'isWinner' : 'isPlaying', params: animationParams}" 
                  [@tokenEnterAnimation]="{value: true, params: animationParams}" 
+                 [@tokenAnimation]="{value: isChainPart ? 'isWinner' : 'isPlaying', params: animationParams}" 
                  [attr.fill]="rowValue === 1 ? 'yellow' : 'red'" 
                  version="1.1" 
                  viewBox="0 0 227.438 227.438" 
                  preserveAspectRatio="xMinYMin meet">
-                <path d="M113.719,0C51.014,0,0,51.014,0,113.719s51.014,113.719,113.719,113.719s113.72-51.014,113.72-113.719S176.424,0,113.719,0z
+                <path style="transform-origin: 50% 50%;" [style.transform]="'rotate(' + randomAngle + 'deg)'"
+                      d="M113.719,0C51.014,0,0,51.014,0,113.719s51.014,113.719,113.719,113.719s113.72-51.014,113.72-113.719S176.424,0,113.719,0z
                         M202.65,84.134c-2.927-0.918-6.038-1.415-9.264-1.415c-6.078,0-11.748,1.765-16.538,4.799c-6.997-16.797-20.51-30.215-37.365-37.1
                         c3.098-4.824,4.903-10.553,4.903-16.7c0-3.135-0.472-6.16-1.341-9.014C171.086,33.966,193.309,56.129,202.65,84.134z M83.658,24.945
                         c-0.823,2.784-1.272,5.727-1.272,8.774c0,6.236,1.857,12.043,5.038,16.91C70.702,57.624,57.34,71.081,50.456,87.86
@@ -72,7 +79,7 @@ export class BoardCellComponent {
     @Input() rowValue: CellValueTypes
     @Input() isChainPart: boolean
 
-    randomAngle: number = Math.floor(Math.random() * 90);
+    randomAngle: number = Math.floor(Math.random() * 180);
 
     get emptyCellsOnTop(): number {
         return NB_ROWS - this.rowNum;
