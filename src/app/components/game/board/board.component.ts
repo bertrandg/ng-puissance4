@@ -6,15 +6,7 @@ import { isBoardColumnFull } from '../../../data/utils';
 @Component({
     selector: 'board',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    host: {
-        class: 'board-effect',
-    },
-    styles: [`
-        :host {
-            display: flex;
-            flex-direction: row;
-        }
-    `],
+    styleUrls: [`./board.component.scss`],
     template: `
         <board-column *ngFor="let columnValues of board; trackBy: trackByFn; let i = index"
                       [class]="'player'+playerTurn" 

@@ -61,20 +61,25 @@
             }
         }
 
-        .score__title {
+        .score__title,
+        .score__games {
             display: none;
         }
 
         .score__player {
-            flex: 0 0 50px !important;
+            flex: 0 0 30px !important;
             height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 5px;
+            margin: 0 0 0 10px;
 
             p {
                 display: none;
+            }
+
+            .player__token {
+                transform-origin: 50% 47%;
             }
         }
     }
