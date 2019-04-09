@@ -1,4 +1,7 @@
 import { AppComponent } from './app.component';
+import { ToggleFullscreenComponent } from './common/fullscreen.component';
+import { TokenComponent } from './common/token.component';
+
 
 import { HomeRouteComponent } from './home/home.route.component';
 import { MenuSmartComponent } from './home/menu/menu.smart.component';
@@ -21,6 +24,8 @@ import { ScoreComponent } from './game/score/score.component';
 
 export const components = [
     AppComponent,
+    ToggleFullscreenComponent,
+    TokenComponent,
 
     HomeRouteComponent,
     MenuSmartComponent,

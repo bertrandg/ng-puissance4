@@ -19,7 +19,7 @@ import { trigger, style, animate, transition, state } from '@angular/animations'
                 opacity: 1,
                 transform: 'scale(1)',
             })),
-            transition('isPlaying => isEnded', animate('.2s 1.5s')),
+            transition('isPlaying => isEnded', animate('.1s 1.5s')),
             transition(':enter', [
                 style({ 
                     opacity: 0,

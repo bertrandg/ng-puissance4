@@ -202,8 +202,14 @@ function getChainsFromLine(line: Array<ICellDetails>): Array<IChain> {
 //////////////////////////////////////
 // OTHERS
 
-export function hasTouch(): boolean {
+export function isTouchDevice(): boolean {
     return 'ontouchstart' in document.documentElement
         || navigator.maxTouchPoints > 0
         || navigator.msMaxTouchPoints > 0;
+}
+
+export function isPwaMode(): boolean {
+    return window.matchMedia('(display-mode: standalone)').matches 
+        || window.navigator['standalone'];
+
 }
