@@ -1,0 +1,74 @@
+{
+  "configVersion": 1,
+  "timestamp": 1554842770741,
+  "index": "/ng-puissance4/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/ng-puissance4/es2015-polyfills.7f5984db89683d0a4d23.js",
+        "/ng-puissance4/favicon.ico",
+        "/ng-puissance4/index.html",
+        "/ng-puissance4/main.e3546734f06bd4adbbde.js",
+        "/ng-puissance4/polyfills.2bb040ce9de995ed8735.js",
+        "/ng-puissance4/runtime.72c572ba6bba6644d055.js",
+        "/ng-puissance4/styles.c41d92cae889999e8329.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/ng-puissance4/assets/icons/icon-128x128.png",
+        "/ng-puissance4/assets/icons/icon-144x144.png",
+        "/ng-puissance4/assets/icons/icon-152x152.png",
+        "/ng-puissance4/assets/icons/icon-192x192.png",
+        "/ng-puissance4/assets/icons/icon-384x384.png",
+        "/ng-puissance4/assets/icons/icon-512x512.png",
+        "/ng-puissance4/assets/icons/icon-72x72.png",
+        "/ng-puissance4/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/ng-puissance4/assets/icons/icon-128x128.png": "ed38557fcda4c834600d311c44f57e5c8a33dd6e",
+    "/ng-puissance4/assets/icons/icon-144x144.png": "6294a7f8841e8b9596a81e0f4222c8557a2a0b28",
+    "/ng-puissance4/assets/icons/icon-152x152.png": "da3b04fdb9bc73409e5a171241b682c61c24c89b",
+    "/ng-puissance4/assets/icons/icon-192x192.png": "480e2cda38feb63668daa8444e1aa6e13a1d27df",
+    "/ng-puissance4/assets/icons/icon-384x384.png": "0334884bf456b3d1affc176d83ac10f5f8ad99dc",
+    "/ng-puissance4/assets/icons/icon-512x512.png": "c387b5d77692032907e6ab9468a15d98bc71a347",
+    "/ng-puissance4/assets/icons/icon-72x72.png": "212021edde0e631526f329d2650d4813d7ec005f",
+    "/ng-puissance4/assets/icons/icon-96x96.png": "efa8dca6d3b1cc5c1e0d7087854a79c635e8d775",
+    "/ng-puissance4/es2015-polyfills.7f5984db89683d0a4d23.js": "22002660fc86be4350cd9abc8ab64c01a708f01c",
+    "/ng-puissance4/favicon.ico": "e9613d2ae41f4ab0eafeaf78cd9c771847b21869",
+    "/ng-puissance4/index.html": "00f6f50a4ef86677e5f8c1d3921a97a981f4c1f5",
+    "/ng-puissance4/main.e3546734f06bd4adbbde.js": "81f9efcaa668cc48716552d628394214f033fffd",
+    "/ng-puissance4/polyfills.2bb040ce9de995ed8735.js": "755e358dacda6f4259fbf4d60eb9dec736392884",
+    "/ng-puissance4/runtime.72c572ba6bba6644d055.js": "842bd6b7e084603d3fbb912ffe92c71c7a983576",
+    "/ng-puissance4/styles.c41d92cae889999e8329.css": "139bc945e4362f8d3dc66358800cbb8f8940d61c"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
