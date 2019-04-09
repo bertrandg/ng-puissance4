@@ -14,6 +14,8 @@ import { routes } from './routes';
 import { DataFacade } from './data/facade';
 import { reducers, metaReducers } from './data/reducers/reducers';
 import { Puissance4Effects } from './data/effects';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { Puissance4Effects } from './data/effects';
         StoreModule.forRoot(reducers, {metaReducers}),
         EffectsModule.forRoot([Puissance4Effects]),
         StoreRouterConnectingModule.forRoot(),
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     ],
     declarations: [...components],
     providers: [
