@@ -63,9 +63,4 @@ export class DataFacade {
     initGame() {
         this.store$.dispatch(new INIT_GAME());
     }
-    
-    errorGame(message: string) {
-        this.store$.dispatch(new ERROR_GAME({message}));
-    }
-    
 }

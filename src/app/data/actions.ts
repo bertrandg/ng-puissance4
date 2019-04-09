@@ -2,15 +2,14 @@ import { Action } from '@ngrx/store';
  
 
 export enum ActionTypes {
-  INIT_ALL =           '[Puissance4] INIT_ALL',
-  RESET_ALL =           '[Puissance4] RESET_ALL',
-  INIT_PLAYERS =        '[Puissance4] INIT_PLAYERS',
-  ADD_TOKEN_TO_COLUMN = '[Puissance4] ADD_TOKEN_TO_COLUMN',
-
-  INIT_GAME =           '[Puissance4] INIT_GAME',
-  UPDATE_GAME =         '[Puissance4] UPDATE_GAME',
-  END_GAME =            '[Puissance4] END_GAME',
-  ERROR_GAME =          '[Puissance4] ERROR_GAME',
+  INIT_ALL =            '[App init] INIT_ALL',
+  RESET_ALL =           '[User action] RESET_ALL',
+  INIT_PLAYERS =        '[User action] INIT_PLAYERS',
+  ADD_TOKEN_TO_COLUMN = '[User action] ADD_TOKEN_TO_COLUMN',
+  INIT_GAME =           '[User action] INIT_GAME',
+  UPDATE_GAME =         '[Effect] UPDATE_GAME',
+  END_GAME =            '[Effect] END_GAME',
+  ERROR_GAME =          '[Effect] ERROR_GAME',
 }
 
 
@@ -32,7 +31,6 @@ export class ADD_TOKEN_TO_COLUMN implements Action {
   readonly type = ActionTypes.ADD_TOKEN_TO_COLUMN;
   constructor(public payload: {column: number}) {}
 }
-
 
 export class INIT_GAME implements Action {
   readonly type = ActionTypes.INIT_GAME;

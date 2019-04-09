@@ -23,10 +23,6 @@ export class BoardColumnComponent {
         return `column--player${ this.playerTurn } ${ this.isFull ? 'column--full' : '' }`;
     }
 
-    /*ngAfterViewChecked() {
-        console.log('cd run column ', this.columnNum)
-    }*/
-
     isChainPart(rowNum: number): boolean {
         return this.winChainsCells.includes(String(this.columnNum)+String(rowNum));
     }
