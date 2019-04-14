@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
+Features:
+- State manage using ngrx
+- Data saved in local storage
+- App build as PWA
+- Animations using @angular/platform-browser/animations
+
+
 ## Build prod
 
 `ng build --prod --baseHref=/ng-puissance4/ --deployUrl=https://bertrandg.github.io/ng-puissance4/`

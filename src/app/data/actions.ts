@@ -38,12 +38,12 @@ export class INIT_GAME implements Action {
 
 export class UPDATE_GAME implements Action {
   readonly type = ActionTypes.UPDATE_GAME;
-  constructor(public payload: {column: number, row: number, player: 1 | 2}) {}
+  constructor(public payload: {board: IBoard, player: 1 | 2}) {}
 }
 
 export class END_GAME implements Action {
   readonly type = ActionTypes.END_GAME;
-  constructor(public payload: {column: number, row: number, player: 1 | 2, status: GameStatusTypes, winChainsCells: Array<string>}) {}
+  constructor(public payload: {board: IBoard, player: 1 | 2, status: GameStatusTypes, winChainsCells: Array<string>}) {}
 }
 
 export class ERROR_GAME implements Action {

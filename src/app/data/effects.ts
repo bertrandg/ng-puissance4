@@ -37,17 +37,17 @@ export class Puissance4Effects {
 
             const isFull = isBoardFull(updatedBoard);
             if(isFull === true) {
-                return new END_GAME({column: action.payload.column, row: indexFirstEmptyRow, player: state.playerTurn, status: 'DRAW', winChainsCells: []});
+                return new END_GAME({board: updatedBoard, player: state.playerTurn, status: 'DRAW', winChainsCells: []});
             }
 
             const chains = getChainsFromBoard(updatedBoard);
             if(chains.length > 0) {
                 const status = (chains[0].player === 1) ? 'WIN_PLAYER_1' : 'WIN_PLAYER_2';
                 const winChainsCells = chains.reduce((acc, chain) => [...acc, ...chain.cells.map(c => String(c.column)+String(c.row))], []);
-                return new END_GAME({column: action.payload.column, row: indexFirstEmptyRow, player: state.playerTurn, status, winChainsCells});
+                return new END_GAME({board: updatedBoard, player: state.playerTurn, status, winChainsCells});
             }
 
-            return new UPDATE_GAME({column: action.payload.column, row: indexFirstEmptyRow, player: state.playerTurn});
+            return new UPDATE_GAME({board: updatedBoard, player: state.playerTurn});
         })
     );
     

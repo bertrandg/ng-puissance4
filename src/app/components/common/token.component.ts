@@ -11,7 +11,6 @@ import { trigger, style, animate, transition, state, keyframes } from '@angular/
                 style({
                     position: 'relative', 
                     transform: 'translateY({{ startAt }})',
-                    willChange: 'transform',
                 }),
                 animate('{{ duration }} ease', 
                 style({transform: 'translateY(0)'})),

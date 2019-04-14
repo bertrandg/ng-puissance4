@@ -1,6 +1,6 @@
 import { cloneDeep } from 'lodash';
 
-import { getEmptyBoard, getUpdatedBoard } from '../utils';
+import { getEmptyBoard } from '../utils';
 import { ActionTypes, ActionsUnion } from '../actions';
 
 
@@ -19,14 +19,14 @@ export function gameReducer(state: ICurrentGame = cloneDeep(initialState), actio
         case ActionTypes.UPDATE_GAME:
             return {
                 ...state,
-                board: getUpdatedBoard(state.board, action.payload.column, action.payload.row, action.payload.player),
+                board: action.payload.board,
                 playerTurn: state.playerTurn === 1 ? 2 : 1,
             };
 
         case ActionTypes.END_GAME:
             return {
                 ...state,
-                board: getUpdatedBoard(state.board, action.payload.column, action.payload.row, action.payload.player),
+                board: action.payload.board,
                 status: action.payload.status,
                 winChainsCells: action.payload.winChainsCells,
             };
