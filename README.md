@@ -1,9 +1,9 @@
 # NgPuissance4
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 Features:
-- Angular 8 Ivy enable
+- Angular 8 with differential loading & ivy enable
 - State manage using ngrx
 - Data saved in local storage
 - App build as PWA
