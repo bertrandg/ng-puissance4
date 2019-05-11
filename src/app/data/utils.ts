@@ -179,19 +179,23 @@ function getChainsFromLine(line: Array<ICellDetails>): Array<IChain> {
     // Allow only one chain per line..
     
     if(stringifiedLine.includes(pattern1)) {
-        const position = stringifiedLine.indexOf(pattern1);
-
+        const start = stringifiedLine.indexOf(pattern1);
+        let end = start + NB_CELL_FOR_CHAIN;
+        while(stringifiedLine[end + 1] === '1') end++;
+        
         return [{
             player: 1,
-            cells: line.slice(position, position + NB_CELL_FOR_CHAIN),
+            cells: line.slice(start, end + 1),
         }];
     }
     else if(stringifiedLine.includes(pattern2)) {
-        const position = stringifiedLine.indexOf(pattern2);
-
+        const start = stringifiedLine.indexOf(pattern2);
+        let end = start + NB_CELL_FOR_CHAIN;
+        while(stringifiedLine[end + 1] === '2') end++;
+        
         return [{
             player: 2,
-            cells: line.slice(position, position + NB_CELL_FOR_CHAIN),
+            cells: line.slice(start, end + 1),
         }];
     }
 

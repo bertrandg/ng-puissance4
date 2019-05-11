@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Store, Action } from '@ngrx/store';
 import { Effect, Actions, ofType, ROOT_EFFECTS_INIT } from '@ngrx/effects';
-import { withLatestFrom, filter, tap, map, throttleTime } from 'rxjs/operators';
+import { withLatestFrom, filter, tap, map } from 'rxjs/operators';
 
 import { ActionTypes, INIT_ALL, INIT_PLAYERS, INIT_GAME, ADD_TOKEN_TO_COLUMN, UPDATE_GAME, END_GAME, ERROR_GAME, RESET_ALL } from './actions';
 import { getLocalStorage, setLocalStorage, removeLocalStorage, getUpdatedBoard, isBoardFull, getChainsFromBoard } from './utils';
@@ -17,7 +17,7 @@ export class Puissance4Effects {
         ofType<ADD_TOKEN_TO_COLUMN>(
             ActionTypes.ADD_TOKEN_TO_COLUMN,
         ),
-        throttleTime(200),
+        //throttleTime(200), // <--- Add it to avoid a user plays 2 times by mistake..
         withLatestFrom(
             this.store$.select(s => s.game)
         ),
