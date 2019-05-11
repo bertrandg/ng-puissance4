@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build": "ng build --prod --baseHref=/ng-puissance4/ --deployUrl=https://bertrandg.github.io/ng-puissance4/",
+    "analyze": "ng build --prod --baseHref=/ng-puissance4/ --stats-json && webpack-bundle-analyzer dist/ng-puissance4/stats-es2015.json",
+    "parse-es2015": "webpack-bundle-analyzer dist/ng-puissance4/stats-es2015.json",
+    "parse-es5": "webpack-bundle-analyzer dist/ng-puissance4/stats-es5.json"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +38,7 @@
     "@types/node": "8.9.4",
     "ts-node": "7.0.0",
     "tslint": "5.15.0",
-    "typescript": "3.4.3"
+    "typescript": "3.4.3",
+    "webpack-bundle-analyzer": "3.3.2"
   }
 }
